@@ -1,0 +1,9 @@
+.chord, .non-chord {
+  display: inline-block;
+  line-height: 12px;
+  font-size: 12px;
+}
+
+pre {
+  margin: 0;
+}

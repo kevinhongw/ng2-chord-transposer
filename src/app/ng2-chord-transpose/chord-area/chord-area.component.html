@@ -1,0 +1,4 @@
+<span>{{ sectionTitle }}</span>
+<div class='chord-area'>
+  <chord-line class='chord-line' [lineMetaData]='line' *ngFor='let line of lines; trackBy: index'></chord-line>
+</div>
