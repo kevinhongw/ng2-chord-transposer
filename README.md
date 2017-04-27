@@ -1,28 +1,88 @@
 # Ng2ChordTransposer
+[![npm version](https://badge.fury.io/js/ng2-chord-transpose.svg)](https://badge.fury.io/js/ng2-chord-transpose.svg) [![npm](https://img.shields.io/npm/dm/ng2-chord-transpose.svg)](https://www.npmjs.com/package/ng2-chord-transpose)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+### Chord Transpose Component for Angular 2
 
-## Development server
+Angular component that enable the user to input plain text guitar chord string and able to change key instantly.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Features:**
+* Guitar chord sheet render
+* Instant transpose
 
-## Code scaffolding
+## Usage
+```
+npm install ng2-chord-transpose
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+##### Module
 
-## Build
+```js
+import { Ng2ChordTransposeModule } from 'ng2-chord-transpose';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+@NgModule({
+  ...
+  imports: [
+    ...
+    Ng2ChordTransposeModule
+  ],
+  providers: [],
+  ...
+})
+export class AppModule { }
+```
 
-## Running unit tests
+##### Component
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```js
+import { Ng2ChordTransposeComponent } from 'ng2-chord-transpose';
+```
+##### HTML template
 
-## Running end-to-end tests
+```html
+<ng2-chord-transpose [chordSections]='data.sections' [key]='data.key'></ng2-chord-transpose>
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Input Attributes
 
-## Further help
+<table>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th align="center">Type</th>
+      <th align="center">Value</th>
+    </tr>
+    <tr>
+      <td><code>chordSections</code></td>
+      <td align="center"><code>[]</code></td>
+      <td align="left">
+        <code>
+        {
+          title: 'section title',
+          body: 'section body'
+        }
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <td><code>key</code></td>
+      <td align="center"><code>String</code></td>
+      <td align="left">The key of the song.<br>
+      Can be any one of the following:<br>
+      <code>['Ab', 'A', 'A#', 'Bb', 'B', 'C', 'C#', 'Db',<br>
+       'D', 'D#', 'Eb', 'E', 'F', 'F#', 'Gb', 'G', 'G#']</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Future features
+* UI render configuation
+* chord list (one click transpose)
+
+## Credits
+Created by [Kevin Hong](https:/github.com/KevinHong913)
+
+Inspired by [angular-chord-transposer](https://github.com/hrgui/angular-chord-transposer)
+
+## License
+ [MIT](/LICENSE)
