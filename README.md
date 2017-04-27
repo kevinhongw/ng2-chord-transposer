@@ -65,11 +65,18 @@ import { Ng2ChordTransposeComponent } from 'ng2-chord-transpose';
     </tr>
     <tr>
       <td><code>key</code></td>
-      <td align="center"><code>String</code></td>
+      <td align="center"><code>string</code></td>
       <td align="left">The key of the song.<br>
       Can be any one of the following:<br>
       <code>['Ab', 'A', 'A#', 'Bb', 'B', 'C', 'C#', 'Db',<br>
        'D', 'D#', 'Eb', 'E', 'F', 'F#', 'Gb', 'G', 'G#']</code>
+      </td>
+    </tr>
+    <tr>
+      <td><code>showUpDown</code></td>
+      <td align="center"><code>boolean</code></td>
+      <td align="left">Show up/down control button if true<br>
+      Default: <code>true</code>
       </td>
     </tr>
   </tbody>

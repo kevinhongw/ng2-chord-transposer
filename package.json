@@ -1,7 +1,7 @@
 {
   "name": "ng2-chord-transpose",
   "description": "Angular2 Chord Transpose Component",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "scripts": {
     "tslint": "ng lint",
     "test": "karma start",
@@ -9,7 +9,9 @@
     "package": "rollup -c",
     "postcss": "postcss src/**/*.css --use autoprefixer  -d dist/bundles",
     "minify": "uglifyjs dist/bundles/ng2ChordTranspose.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng2ChordTranspose.umd.min.js",
-    "build": "npm run transpile && npm run package && npm run minify"
+    "build": "npm run transpile && npm run package && npm run minify && npm run readme",
+    "readme": "cp README.md dist",
+    "clean:src": "find . -name '*.ngfactory.ts' -delete && find . -name '*.ngstyle.ts' -delete"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,10 @@
   "main": "bundles/index.umd.js",
   "module": "index.js",
   "typings": "index.d.ts",
-  "homepage": "https://github.com/KevinHong913",
+  "homepage": "https://github.com/KevinHong913/ng2-chord-transposer",
   "peerDependencies": {
-    "@angular/core": "^4.1.0"
+    "@angular/core": "^4.1.0",
+    "@angular/common": "^4.1.0"
   },
   "devDependencies": {
     "@angular/common": "^4.1.0",

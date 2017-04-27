@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges, SimpleChange, Input } from '@angular/core';
 import { Ng2ChordTransposeService } from './services/ng2-chord-transpose.service';
 import { ChordAreaComponent } from './chord-area/chord-area.component';
 
 @Component({
   selector: 'ng2-chord-transpose',
   template: `
-  <div>
+  <div *ngIf="showUpDown">
     <button (click)="keyUp()">Up</button>
     <button (click)="keyDown()">Down</button>
   </div>
@@ -17,6 +17,7 @@ export class Ng2ChordTransposeComponent implements OnInit {
   @Input() chordSections: any;
   @Input() key: string;
   @Input() settings: any;
+  @Input() showUpDown: boolean = true;
   currentKey: any;
 
   constructor(private chordService: Ng2ChordTransposeService) {
@@ -41,6 +42,14 @@ export class Ng2ChordTransposeComponent implements OnInit {
   private _changeKeyByValue(keyValue) {
     const newKey = this.chordService.getKeyByValue(keyValue);
     this.currentKey = newKey;
+  }
+
+
+  ngOnChanges(changes: any) {
+    // if key change
+    if (changes['key'] !== undefined) {
+      this.currentKey = changes['key'].currentValue;
+    }
   }
 
   ngOnInit() {

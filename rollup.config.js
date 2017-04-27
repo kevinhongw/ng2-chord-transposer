@@ -6,5 +6,7 @@ export default {
   moduleName: 'ng2ChordTranspose',
   globals: {
     '@angular/core': 'ng.core',
-  }
+  },
+  "external": [ "@angular/core" ]
+
 }
