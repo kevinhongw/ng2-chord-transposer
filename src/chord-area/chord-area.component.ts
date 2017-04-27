@@ -1,12 +1,20 @@
-import { Component, OnInit, OnChanges, SimpleChanges, Input, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { Ng2ChordTransposeService } from '../ng2-chord-transpose.service';
+import { Component, OnInit, OnChanges, SimpleChanges, SimpleChange, Input, ElementRef, ViewChild } from '@angular/core';
+import { Ng2ChordTransposeService } from '../services/ng2-chord-transpose.service';
 import { ChordLineComponent } from '../chord-line/chord-line.component';
 
 
+/* PLEASE BE EXTRA CAREFUL WITH THE PRE TAG, EVERY SPACE AND LINE COUNTS!!!! */
 @Component({
   selector: 'chord-area',
-  templateUrl: './chord-area.component.html',
-  styleUrls: ['./chord-area.component.css'],
+  template:  `
+  <span>{{ sectionTitle }}</span>
+  <pre class='chord-area'>
+<chord-line [lineMetaData]='line' *ngFor='let line of lines; trackBy: index'></chord-line>
+  </pre>
+`,
+  styles: [
+    'pre { margin: 0; line-height: 14px; font-size: 14px }'
+  ],
 })
 export class ChordAreaComponent implements OnInit, OnChanges {
   @Input() chordData: any;
@@ -16,14 +24,6 @@ export class ChordAreaComponent implements OnInit, OnChanges {
   private keys: Array<any>;
   private regexes: any;
   lines: Array<any> = [];
-  /*
-    lines: [
-      {
-        isChord: true,
-        lineData:[ { isWhiteSpc: false, value: 'E'} ]
-      }
-    ]
-   */
 
   constructor(private chordService: Ng2ChordTransposeService) {
     this.keys = this.chordService.getMusicKeys();
@@ -31,7 +31,7 @@ export class ChordAreaComponent implements OnInit, OnChanges {
   }
 
   private _wrapChords(input) {
-    const lineOutput = [];
+    const lineOutput: Array<any> = [];
     const regex = this.regexes.chordReplaceRegex;
     const matchAry = input.match(regex);
     let lastPos = 0;
@@ -39,11 +39,7 @@ export class ChordAreaComponent implements OnInit, OnChanges {
       const matchPos = input.indexOf(match, lastPos);
       const subStr = input.substring(lastPos, matchPos);
       lineOutput.push({ isWhiteSpc: true, value: subStr });
-
-      lineOutput.push({
-        isWhiteSpc: false,
-        value: match
-      });
+      lineOutput.push({ isWhiteSpc: false, value: match });
 
       lastPos = matchPos + match.length;
     });
@@ -91,7 +87,7 @@ export class ChordAreaComponent implements OnInit, OnChanges {
     // this.chordKey = newKey;
   }
 
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnChanges(changes: any) {
     // if key change
     if (changes['chordKey'] !== undefined) {
       if (!changes['chordKey'].currentValue) {

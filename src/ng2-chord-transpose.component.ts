@@ -1,12 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Ng2ChordTransposeService } from './ng2-chord-transpose.service';
+import { Ng2ChordTransposeService } from './services/ng2-chord-transpose.service';
 import { ChordAreaComponent } from './chord-area/chord-area.component';
 
 @Component({
   selector: 'ng2-chord-transpose',
-  templateUrl: './ng2-chord-transpose.component.html',
-  styleUrls: ['./ng2-chord-transpose.component.css'],
-  providers: [ Ng2ChordTransposeService ]
+  template: `
+  <div>
+    <button (click)="keyUp()">Up</button>
+    <button (click)="keyDown()">Down</button>
+  </div>
+  <chord-area *ngFor='let section of chordSections; trackBy: index' [chordKey]='currentKey' [chordData]='section.body' [sectionTitle]='section.title'></chord-area>
+  `,
+  // styleUrls: ['./ng2-chord-transpose.component.css']
 })
 export class Ng2ChordTransposeComponent implements OnInit {
   @Input() chordSections: any;
@@ -14,7 +19,7 @@ export class Ng2ChordTransposeComponent implements OnInit {
   @Input() settings: any;
   currentKey: any;
 
-  constructor(public chordService: Ng2ChordTransposeService) {
+  constructor(private chordService: Ng2ChordTransposeService) {
   }
 
   keyUp() {

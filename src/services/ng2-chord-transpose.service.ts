@@ -71,18 +71,18 @@ export class Ng2ChordTransposeService {
     }
     let i = 0;
     if (keyValue === 0 || keyValue === 2 || keyValue === 5 || keyValue === 7 || keyValue === 10) {
-      switch (targetKey.name) {
-        case 'A':
-        case 'A':
-        case 'B':
-        case 'C':
-        case 'C':
-        case 'D':
-        case 'D':
-        case 'E':
-        case 'F':
-        case 'G':
-        case 'G':
+      switch (targetKey) {
+        case "A":
+        case "A#":
+        case "B":
+        case "C":
+        case "C#":
+        case "D":
+        case "D#":
+        case "E":
+        case "F#":
+        case "G":
+        case "G#":
           for (; i < this.keys.length; i++) {
             if (this.keys[i].value === keyValue && this.keys[i].type === 'S') {
               return this.keys[i];

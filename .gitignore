@@ -5,6 +5,11 @@
 /tmp
 /out-tsc
 
+# compiled file
+/src/**/*.ngfactory.ts
+/src/**/*.ngsummary.json
+/src/**/*.ngstyle.ts
+
 # dependencies
 /node_modules
 
