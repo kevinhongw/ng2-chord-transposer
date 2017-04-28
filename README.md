@@ -87,7 +87,7 @@ import { Ng2ChordTransposeComponent } from 'ng2-chord-transpose';
 * chord list (one click transpose)
 
 ## Credits
-Created by [Kevin Hong](https:/github.com/KevinHong913)
+Created by [Kevin Hong](https://github.com/KevinHong913)
 
 Inspired by [angular-chord-transposer](https://github.com/hrgui/angular-chord-transposer)
 
