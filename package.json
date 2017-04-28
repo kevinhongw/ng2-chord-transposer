@@ -1,7 +1,7 @@
 {
   "name": "ng2-chord-transpose",
   "description": "Angular2 Chord Transpose Component",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "scripts": {
     "tslint": "ng lint",
     "test": "karma start",
