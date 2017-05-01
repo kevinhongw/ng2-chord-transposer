@@ -83,8 +83,8 @@ import { Ng2ChordTransposeComponent } from 'ng2-chord-transpose';
 </table>
 
 ## Future features
-* UI render configuation
-* chord list (one click transpose)
+* Test cases
+* styling
 
 ## Credits
 Created by [Kevin Hong](https://github.com/KevinHong913)
