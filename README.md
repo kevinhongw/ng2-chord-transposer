@@ -9,6 +9,10 @@ Angular component that enable the user to input plain text guitar chord string a
 * Guitar chord sheet render
 * Instant transpose
 
+### New in 1.2.0
+* Add showKeyList UI control
+* Empty line or line of spaces now does not consider as new line
+
 ## Usage
 ```
 npm install ng2-chord-transpose
@@ -77,6 +81,13 @@ import { Ng2ChordTransposeComponent } from 'ng2-chord-transpose';
       <td align="center"><code>boolean</code></td>
       <td align="left">Show up/down control button if true<br>
       Default: <code>true</code>
+      </td>
+    </tr>
+    <tr>
+      <td><code>showKeyList</code></td>
+      <td align="center"><code>boolean</code></td>
+      <td align="left">Show key list<br>
+      Default: <code>false</code>
       </td>
     </tr>
   </tbody>
