@@ -125,6 +125,7 @@ export class Ng2ChordTransposeService {
   };
 
   isChordLine(input: string): any {
+    if(input.trim() === '') { return false; }
     const tokens = input.replace(/\s+/, ' ').split(' ');
     for (let i = 0; i < tokens.length; i++) {
       // !tokens[i].trim().length === 0 doesnt make sense yet

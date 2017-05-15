@@ -1,7 +1,7 @@
 {
   "name": "ng2-chord-transpose",
   "description": "Angular2 Chord Transpose Component",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "scripts": {
     "tslint": "ng lint",
     "test": "karma start",
@@ -29,8 +29,8 @@
   "typings": "index.d.ts",
   "homepage": "https://github.com/KevinHong913/ng2-chord-transposer",
   "peerDependencies": {
-    "@angular/core": "^4.1.0",
-    "@angular/common": "^4.1.0"
+    "@angular/core": "~4.1.0",
+    "@angular/common": "~4.1.0"
   },
   "devDependencies": {
     "@angular/common": "^4.1.0",
