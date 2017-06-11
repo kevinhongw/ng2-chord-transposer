@@ -12,7 +12,7 @@ import { ChordAreaComponent } from './chord-area/chord-area.component';
     <button (click)="keyUp()">Up</button>
     <button (click)="keyDown()">Down</button>
   </div>
-  <chord-area *ngFor='let section of chordSections; trackBy: index' [chordKey]='currentKey' [chordData]='section.body' [sectionTitle]='section.title'></chord-area>
+  <chord-area *ngFor='let section of chordSections; let i = index' [chordKey]='currentKey' [chordData]='section.body' [sectionTitle]='section.title'></chord-area>
   `,
   styles: [
     '.keys-list-item { margin: 0 10px; }'

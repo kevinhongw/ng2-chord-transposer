@@ -9,11 +9,11 @@ import { ChordLineComponent } from '../chord-line/chord-line.component';
   template:  `
   <span>{{ sectionTitle }}</span>
   <pre class='chord-area'>
-<chord-line [lineMetaData]='line' *ngFor='let line of lines; trackBy: index'></chord-line>
+<chord-line [lineMetaData]='line' *ngFor='let line of lines; let i = index;'></chord-line>
   </pre>
 `,
   styles: [
-    'pre { margin: 0; line-height: 14px; font-size: 14px }'
+    'pre { margin: 0; }'
   ],
 })
 export class ChordAreaComponent implements OnInit, OnChanges {
