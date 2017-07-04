@@ -1,5 +1,5 @@
 <pre *ngIf='lineMetaData.isChord'>
-  <span *ngFor='let piece of lineMetaData.lineData; trackBy: index'
+  <span *ngFor='let piece of lineMetaData.lineData; let i = index'
   [class.chord-area__chord]='!piece.isWhiteSpc' class='chord'>{{ piece.value }}</span>
 </pre>
 <pre *ngIf='!lineMetaData.isChord'>

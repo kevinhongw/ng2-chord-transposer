@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   template:
   `<span class='chord-line'>` +
     `<template [ngIf]='lineMetaData.isChord'>` +
-      `<span *ngFor='let piece of lineMetaData.lineData; trackBy: index'[class.chord-area__chord]='!piece.isWhiteSpc' class='chord'>` +
+      `<span *ngFor='let piece of lineMetaData.lineData; let i = index'[class.chord-area__chord]='!piece.isWhiteSpc' class='chord'>` +
         `{{ piece.value }}` +
       `</span>` +
     `</template>` +
