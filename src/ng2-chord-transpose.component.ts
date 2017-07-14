@@ -9,8 +9,8 @@ import { ChordAreaComponent } from './chord-area/chord-area.component';
     <span (click)="setKey(key)" *ngFor="let key of keysList" class="keys-list-item">{{key}}</span>
   </div>
   <div *ngIf="showUpDown" class="up-down-container">
-    <button (click)="keyUp()">Up</button>
-    <button (click)="keyDown()">Down</button>
+    <button type="button" (click)="keyUp()">Up</button>
+    <button type="button" (click)="keyDown()">Down</button>
   </div>
   <chord-area *ngFor='let section of chordSections; let i = index' [chordKey]='currentKey' [chordData]='section.body' [sectionTitle]='section.title'></chord-area>
   `,

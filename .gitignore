@@ -45,3 +45,51 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+### DEMO ###
+# compiled output
+/demo/dist
+/demo/tmp
+/demo/out-tsc
+
+# compiled file
+/demo/src/**/*.ngfactory.ts
+/demo/src/**/*.ngsummary.json
+/demo/src/**/*.ngstyle.ts
+
+# dependencies
+/demo/node_modules
+
+# IDEs and editors
+/demo/.idea
+/demo/.project
+/demo/.classpath
+/demo/.c9/
+*.launch
+/demo/.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+/demo/.vscode/*
+!/demo/.vscode/settings.json
+!/demo/.vscode/tasks.json
+!/demo/.vscode/launch.json
+!/demo/.vscode/extensions.json
+
+# misc
+/demo//.sass-cache
+/demo/connect.lock
+/demo/coverage
+/demo/libpeerconnection.log
+/demo/npm-debug.log
+/demo/testem.log
+/demo/typings
+
+# e2e
+/demo/e2e/*.js
+/demo/e2e/*.map
+
+# System Files
+/demo/.DS_Store
+/demo/Thumbs.db
