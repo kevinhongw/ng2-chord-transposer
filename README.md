@@ -20,9 +20,18 @@ https://www.bandman.io
 * Instant transpose
 
 ## USAGE
+
 ```
 npm install ng2-chord-transpose
 ```
+### New in 1.3.0
+* Allow seperate bar "|" in between chords
+* Add new demo project
+
+### New in 1.2.0
+* Add showKeyList UI control
+* Empty line or line of spaces now does not consider as new line
+
 
 ##### Module
 
@@ -87,6 +96,13 @@ import { Ng2ChordTransposeComponent } from 'ng2-chord-transpose';
       <td align="center"><code>boolean</code></td>
       <td align="left">Show up/down control button if true<br>
       Default: <code>true</code>
+      </td>
+    </tr>
+    <tr>
+      <td><code>showKeyList</code></td>
+      <td align="center"><code>boolean</code></td>
+      <td align="left">Show key list<br>
+      Default: <code>false</code>
       </td>
     </tr>
   </tbody>
