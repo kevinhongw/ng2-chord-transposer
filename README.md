@@ -5,18 +5,33 @@
 
 Angular component that enable the user to input plain text guitar chord string and able to change key instantly.
 
-**Features:**
+**DEMO**
+
+Pleaes clone then navigate to the demo folder.
+
+Run `npm install` then `ng serve`
+
+This module is also being used in iOS app "BandMan" as its transpose library.
+
+https://www.bandman.io
+
+**FEATURES**
 * Guitar chord sheet render
 * Instant transpose
+
+## USAGE
+
+```
+npm install ng2-chord-transpose
+```
+### New in 1.3.0
+* Allow seperate bar "|" in between chords
+* Add new demo project
 
 ### New in 1.2.0
 * Add showKeyList UI control
 * Empty line or line of spaces now does not consider as new line
 
-## Usage
-```
-npm install ng2-chord-transpose
-```
 
 ##### Module
 
@@ -46,7 +61,7 @@ import { Ng2ChordTransposeComponent } from 'ng2-chord-transpose';
 <ng2-chord-transpose [chordSections]='data.sections' [key]='data.key'></ng2-chord-transpose>
 ```
 
-## Input Attributes
+## INPUT ATTRIBUTES
 
 <table>
   <tbody>
@@ -93,14 +108,13 @@ import { Ng2ChordTransposeComponent } from 'ng2-chord-transpose';
   </tbody>
 </table>
 
-## Future features
+## FUTURE FEATURES
 * Test cases
-* styling
 
-## Credits
+## CREDITS
 Created by [Kevin Hong](https://github.com/KevinHong913)
 
 Inspired by [angular-chord-transposer](https://github.com/hrgui/angular-chord-transposer)
 
-## License
+## LICENSE
  [MIT](/LICENSE)
