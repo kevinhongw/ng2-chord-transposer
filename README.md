@@ -22,7 +22,7 @@ https://www.bandman.io
 ## USAGE
 
 ```
-npm install ng2-chord-transpose
+npm install ng2-chord-transpose --save
 ```
 ### New in 1.3.0
 * Allow seperate bar "|" in between chords
