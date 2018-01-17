@@ -1,5 +1,5 @@
 # Ng2ChordTransposer
-[![npm version](https://badge.fury.io/js/ng2-chord-transpose.svg)](https://badge.fury.io/js/ng2-chord-transpose.svg) [![npm](https://img.shields.io/npm/dm/ng2-chord-transpose.svg)](https://www.npmjs.com/package/ng2-chord-transpose)
+[![npm version](https://badge.fury.io/js/ng2-chord-transpose.svg)](https://badge.fury.io/js/ng2-chord-transpose.svg) [![npm](https://img.shields.io/npm/dm/ng2-chord-transpose.svg)](https://www.npmjs.com/package/ng2-chord-transpose) [![npm](https://img.shields.io/npm/dt/ng2-chord-transpose.svg)](https://www.npmjs.com/package/ng2-chord-transpose)
 
 ### Chord Transpose Component for Angular 2
 
